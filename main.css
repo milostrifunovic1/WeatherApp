@@ -1,0 +1,122 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#311847, #3EB9E6) fixed;
+}
+.city-temperature:after {
+    content: '°C';
+    font-size: 95px;
+    font-weight: normal;
+
+}
+
+.city-temperature {
+    font-size: 95px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.city-location {
+    font-size: 45px;
+}
+
+
+.next-temp-1:after,
+.next-temp-2:after,
+.next-temp-3:after,
+.next-temp-4:after,
+.next-temp-5:after,
+.next-temp-6:after,
+.next-temp-7:after,
+.next-temp-11:after,
+.next-temp-22:after,
+.next-temp-33:after,
+.next-temp-44:after,
+.next-temp-55:after,
+.next-temp-66:after,
+.next-temp-77:after {
+    content: '°';
+    font-size: 35spx;    
+}
+
+.next-temp-1,
+.next-temp-2,
+.next-temp-3,
+.next-temp-4,
+.next-temp-5,
+.next-temp-6,
+.next-temp-7,
+.next-temp-11,
+.next-temp-22,
+.next-temp-33,
+.next-temp-44,
+.next-temp-55,
+.next-temp-66,
+.next-temp-77 {
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+}
+.weather-icon-1,
+.weather-icon-2,
+.weather-icon-3,
+.weather-icon-4,
+.weather-icon-5,
+.weather-icon-6,
+.weather-icon-7 {
+    width: 70px;
+    height: 70px;
+}
+
+.date1,
+.date2,
+.date3,
+.date4,
+.date5,
+.date6,
+.date7 {
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    vertical-align: bottom;
+}
+
+.col1,
+.col2,
+.col3,
+.col4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.footer {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+
+
+
+#tooltip {  
+    position: relative;
+    display: inline-block;
+}
+
+#tooltip .tooltiptext {
+    font-family: 'Montserrat';
+    visibility: hidden;
+    background-color: floralwhite;
+    min-width: 100%;
+    color: darkblue;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 12px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    right: 70%;
+}
+
+#tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Simple Weather App">
+    <meta name="author" content="Miloš Trifunović">
+    <link rel="icon" href="weather-icon-2.png" type="image/gif" sizes="16x16">
+    
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css">
+</head>
+    
+<body>
+    <div class="container m-auto pt-md-5 p-0">
+        <div class="row location col-12 col-md-8 m-auto p-0 justify-content-center">    
+           <div class="city-location col-12 col-md-12 m-auto p-0 pt-4 pb-3 text-center text-white">Location:</div>
+            <div class="col-12 col-md-6 m-auto p-0 text-center"><canvas class="weather-icon pt-3" width="128" height="128" text-center></canvas><h3 class="weather-summary m-auto pt-1 pb-3 text-white"></h3></div>
+            <div class="city-temperature col-12 col-md-6 m-auto p-0 pb-3 text-white text-center">0</div>
+        </div><br>
+        <div class="row table col-12 col-md-8 m-auto p-0 text-center">
+            <div class="col1 col-4 col-md-3 m-auto p-2 pt-md-4 text-white">Date</div>
+            <div class="col2 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">Min</div>
+            <div class="col3 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">Max</div>
+            <div class="col4 col-4 col-md-3 m-auto p-2 pt-md-4 text-white">Weather</div>
+           </div><br>
+        <div class="row next-days col-12 col-md-8 m-auto p-0 text-center">
+           <div class="row day-1 col-12 m-auto p-0 text-center">
+            <div class="date1 col-4 col-md-3 m-auto p-2 pt-md-4 text-white"></div>
+            <div class="next-temp-1 col-2 col-md-3 m-auto p-2 pt-md-4  text-white">0</div>
+            <div class="next-temp-11 col-2 col-md-3 m-auto p-2 pt-md-4  text-white">0</div>
+            <div id="tooltip" class="col-4 col-md-3 m-auto text-center"><span class="tooltiptext" id="day1"></span><canvas class="weather-icon-1" width="128" height="128" text-center></canvas></div>
+           </div>
+           <div class=" row day-2 col-12 m-auto p-0 text-center">
+            <div class="date2 col-4 col-md-3 m-auto p-2 pt-md-4 text-white align-text-bottom"></div>
+            <div class="next-temp-2 col-2 col-md-3 m-auto p-2 pt-md-4  text-white">0</div>
+            <div class="next-temp-22 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div id="tooltip" class="col-4 col-md-3 m-auto text-center"><span class="tooltiptext" id="day2"></span><canvas class="weather-icon-2" width="128" height="128" text-center></canvas></div>
+           </div>
+           <div class="row day-3 col-12 m-auto p-0 text-center">
+            <div class="date3 col-4 col-md-3 m-auto p-2 pt-md-4 text-white"></div> 
+            <div class="next-temp-3 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div class="next-temp-33 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div  id="tooltip" class="col-4 col-md-3 m-auto text-center"><span class="tooltiptext" id="day3"></span><canvas class="weather-icon-3" width="128" height="128" text-center></canvas></div>
+           </div>
+           <div class="row day-4 col-12 m-auto p-0 text-center">
+            <div class="date4 col-4 col-md-3 m-auto p-2 pt-md-4 text-white"></div> 
+            <div class="next-temp-4 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div class="next-temp-44 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div  id="tooltip" class="col-4 col-md-3 m-auto text-center"><span class="tooltiptext" id="day4"></span><canvas class="weather-icon-4" width="128" height="128" text-center></canvas></div>
+           </div>
+           <div class="row day-5 col-12 m-auto p-0 text-center">
+            <div class="date5 col-4 col-md-3 m-auto p-2 pt-md-4 text-white"></div> 
+            <div class="next-temp-5 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div class="next-temp-55 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div  id="tooltip" class="col-4 col-md-3 m-auto text-center"><span class="tooltiptext" id="day5"></span><canvas class="weather-icon-5" width="128" height="128" text-center></canvas></div>
+           </div>
+           <div class="row day-6 col-12 m-auto p-0 text-center">
+            <div class="date6 col-4 col-md-3 m-auto p-2 pt-md-4 text-white"></div> 
+            <div class="next-temp-6 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div class="next-temp-66 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div  id="tooltip" class="col-4 col-md-3 m-auto text-center"><span class="tooltiptext" id="day6"></span><canvas class="weather-icon-6" width="128" height="128" text-center></canvas></div>
+           </div>
+           <div class="row day-7 col-12 m-auto p-0 text-center">
+            <div class="date7 col-4 col-md-3 m-auto p-2 pt-md-4 text-white"></div> 
+            <div class="next-temp-7 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div class="next-temp-77 col-2 col-md-3 m-auto p-2 pt-md-4 text-white">0</div>
+            <div  id="tooltip" class="col-4 col-md-3 m-auto text-center"><span class="tooltiptext" id="day7"></span><canvas class="weather-icon-7" width="128" height="128" text-center></canvas></div>
+           </div>
+        </div><br>
+            <div class="footer m-auto p-0 pr-2 text-right text-white">© 2019 Weather App by<a href="https://milostrifunovic1.github.io/portfolio/" class="text-white" target="_blank"> Miloš Trifunović</a>
+            </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script src="app.js"></script>
+    <script src="skycons.js"></script>
+
+</body>
+</html>
