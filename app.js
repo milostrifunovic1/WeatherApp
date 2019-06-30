@@ -65,53 +65,53 @@ window.addEventListener('load', ()=>{
             };
                 
             function icon1(){
-                const {icon} = data.daily.data[0];
+                const {icon} = data.daily.data[1];
                 setIcons(icon, weatherIcon1);
-                nextTemp1.textContent = Math.round(data.daily.data[0].temperatureMin);
-                nextTemp11.textContent = Math.round(data.daily.data[0].temperatureMax);
-                weatherSumNext1.textContent = data.daily.data[0].summary;
+                nextTemp1.textContent = Math.round(data.daily.data[1].temperatureMin);
+                nextTemp11.textContent = Math.round(data.daily.data[1].temperatureMax);
+                weatherSumNext1.textContent = data.daily.data[1].summary;
             };
             function icon2(){
-                const {icon} = data.daily.data[1];
+                const {icon} = data.daily.data[2];
                 setIcons(icon, weatherIcon2);
-                nextTemp2.textContent = Math.round(data.daily.data[1].temperatureMin);
-                nextTemp22.textContent = Math.round(data.daily.data[1].temperatureMax);
-                weatherSumNext2.textContent = data.daily.data[1].summary;
+                nextTemp2.textContent = Math.round(data.daily.data[2].temperatureMin);
+                nextTemp22.textContent = Math.round(data.daily.data[2].temperatureMax);
+                weatherSumNext2.textContent = data.daily.data[2].summary;
             };
             function icon3(){
-                const {icon} = data.daily.data[2];
+                const {icon} = data.daily.data[3];
                 setIcons(icon, weatherIcon3);
-                nextTemp3.textContent = Math.round(data.daily.data[2].temperatureMin);
-                nextTemp33.textContent = Math.round(data.daily.data[2].temperatureMax);
-                weatherSumNext3.textContent = data.daily.data[2].summary;
+                nextTemp3.textContent = Math.round(data.daily.data[3].temperatureMin);
+                nextTemp33.textContent = Math.round(data.daily.data[3].temperatureMax);
+                weatherSumNext3.textContent = data.daily.data[3].summary;
             };
              function icon4(){
-                const {icon} = data.daily.data[3];
+                const {icon} = data.daily.data[4];
                 setIcons(icon, weatherIcon4);
-                nextTemp4.textContent = Math.round(data.daily.data[3].temperatureMin);
-                nextTemp44.textContent = Math.round(data.daily.data[3].temperatureMax);
-                weatherSumNext4.textContent = data.daily.data[3].summary;
+                nextTemp4.textContent = Math.round(data.daily.data[4].temperatureMin);
+                nextTemp44.textContent = Math.round(data.daily.data[4].temperatureMax);
+                weatherSumNext4.textContent = data.daily.data[4].summary;
             };
              function icon5(){
-                const {icon} = data.daily.data[4];
+                const {icon} = data.daily.data[5];
                 setIcons(icon, weatherIcon5);
-                nextTemp5.textContent = Math.round(data.daily.data[4].temperatureMin);
-                nextTemp55.textContent = Math.round(data.daily.data[4].temperatureMax);
-                weatherSumNext5.textContent = data.daily.data[4].summary;
+                nextTemp5.textContent = Math.round(data.daily.data[5].temperatureMin);
+                nextTemp55.textContent = Math.round(data.daily.data[5].temperatureMax);
+                weatherSumNext5.textContent = data.daily.data[5].summary;
             };
              function icon6(){
-                const {icon} = data.daily.data[5];
+                const {icon} = data.daily.data[6];
                 setIcons(icon, weatherIcon6);
-                nextTemp6.textContent = Math.round(data.daily.data[5].temperatureMin);
-                nextTemp66.textContent = Math.round(data.daily.data[5].temperatureMax);
-                weatherSumNext6.textContent = data.daily.data[5].summary;
+                nextTemp6.textContent = Math.round(data.daily.data[6].temperatureMin);
+                nextTemp66.textContent = Math.round(data.daily.data[6].temperatureMax);
+                weatherSumNext6.textContent = data.daily.data[6].summary;
             };
              function icon7(){
-                const {icon} = data.daily.data[6];
+                const {icon} = data.daily.data[7];
                 setIcons(icon, weatherIcon7);
-                nextTemp7.textContent = Math.round(data.daily.data[6].temperatureMin);
-                nextTemp77.textContent = Math.round(data.daily.data[6].temperatureMax);
-                weatherSumNext7.textContent = data.daily.data[6].summary;
+                nextTemp7.textContent = Math.round(data.daily.data[7].temperatureMin);
+                nextTemp77.textContent = Math.round(data.daily.data[7].temperatureMax);
+                weatherSumNext7.textContent = data.daily.data[7].summary;
             };
                 
                 mainPart();
